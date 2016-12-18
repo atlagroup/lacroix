@@ -1,0 +1,2 @@
+class PaiController < ApplicationController
+end
