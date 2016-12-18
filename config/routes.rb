@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   get 'professor', to: 'professor#index', as: 'professor'
   get 'escola', to: 'escola#index', as: 'escola'
   get 'governo', to: 'governo#index', as: 'governo'
+  get 'sobre', to: 'sobre#index', as: 'sobre'
+  get 'join', to: 'join#index', as: 'join'
+
+
 end

@@ -32,9 +32,17 @@
                     <li class="<%= 'active' if current_page?(escola_path) %>"><%= link_to "Escola", escola_path %></li>
                     <li class="<%= 'active' if current_page?(governo_path) %>"><%= link_to "Governo", governo_path %></li>
                 </ul>
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Entre</button>
+                    <button class="btn btn-success ">Cadastre-se</button>
+                </form>
+
             </div>
             <!-- /.navbar-collapse -->
-        </div>
+            
         <!-- /.container -->
     </nav>
     <%= yield %>
@@ -46,11 +54,11 @@
                     <div class="col-lg-12">
                         <ul class="list-inline">
                             <li>
-                                <a href="#">Home</a>
+                                <a href="/">Home</a>
                             </li>
                             <li class="footer-menu-divider">&sdot;</li>
                             <li>
-                                <a href="#about">About</a>
+                                <a href="sobre">Sobre</a>
                             </li>
                             <li class="footer-menu-divider">&sdot;</li>
                             <li>
