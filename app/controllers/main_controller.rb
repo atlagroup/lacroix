@@ -1,6 +1,7 @@
 class MainController < ApplicationController
+  before_action :authenticate_professor!
 
-    def index
+  def index
 
-    end
+  end
 end
