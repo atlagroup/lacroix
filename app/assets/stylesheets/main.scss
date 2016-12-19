@@ -8,14 +8,38 @@ body {
 
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
 
+.business-background-home{
+    background: url('http://www.lagoinha.com/lagoinha-wp-site/wp-content/uploads/2015/01/internet.jpg') center center no-repeat scroll;
+}
+
+.business-background-estudante{
+    background: url('https://image.freepik.com/fotos-gratis/sorrindo-alunos-do-ensino-primario-que-sentam-se-na-sala-de-aula_1098-3953.jpg') center center no-repeat scroll;   
+}
+
+.business-background-pai{
+    background: url('http://vivomaissaudavel.com.br/static/media/uploads/papel-dos-pais-na-educacao.jpg') center center no-repeat scroll;   
+}
+
+.business-background-professor{
+    background: url('http://portalcostanorte.meionorte.com/wp-content/uploads/2016/01/48.jpg') center center no-repeat scroll;   
+}
+
+.business-background-escola{
+    background: url('http://www.unidesc.edu.br/wp-content/uploads/2015/08/adm.jpg') center center no-repeat scroll;   
+}
+
+.business-background-governo{
+    background: url('http://www2.planalto.gov.br/presidencia/palacios-e-residencias-oficiais/palacio-do-planalto/galeria-de-imagens/palacio-do-planalto-21.jpg/download') center center no-repeat scroll;
+}
+
+
+
 .business-header {
     height: 700px;
-    background: url('http://www.lagoinha.com/lagoinha-wp-site/wp-content/uploads/2015/01/internet.jpg') center center no-repeat scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    text-align: center;
     vertical-align: middle;
 }
 
