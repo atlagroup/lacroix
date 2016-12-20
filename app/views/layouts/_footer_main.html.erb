@@ -1,85 +1,68 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Lacroix</title>
-    <%= csrf_meta_tags %>
-   
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-
-    <%= yield %>
-
-    <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <ul class="list-inline">
-                            <li>
-                                <a href="/">Home</a>
-                            </li>
-                            <li class="footer-menu-divider">&sdot;</li>
-                            <li>
-                                <a href="sobre">Sobre</a>
-                            </li>
-                            <li class="footer-menu-divider">&sdot;</li>
-                            <li>
-                                <a href="#services">Services</a>
-                            </li>
-                            <li class="footer-menu-divider">&sdot;</li>
-                            <li>
-                                <a href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                        <p class="copyright text-muted small">Copyright &copy; ATLA 2016. All Rights Reserved</p>
-                    </div>
-                </div>
-            </div>
-            <% if Rails.env.development? %>
-              <div class="panel panel-warning"> 
-                <div class="panel-heading"> 
-                  <h3 class="panel-title">Debug! Essas informações não aparecem no ambiente de produção!</h3> 
-                </div> 
-                <div class="panel-body">
-                </div> 
-                <ul class='list-group'>
-                  <% if current_professor %>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="list-inline">
                     <li>
-                      <h4>Logado como:</h4>
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>id</th>
-                            <th>nome</th>
-                            <th>sobrenome</th>
-                            <th>nome_usuario</th>
-                            <th>email</th>
-                            <th>telefone</th>
-                            <th>tipo</th>
-                            <th>sair</th>
-                          </tr> 
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row"><%= current_professor.id %></th>
-                            <td><%= current_professor.nome %></td>
-                            <td><%= current_professor.sobrenome %></td>
-                            <td><%= current_professor.nome_usuario %></td>
-                            <td><%= current_professor.email %></td>
-                            <td><%= current_professor.telefone %></td>
-                            <td><%= current_professor.type %></td>
-                            <td><%= link_to "Sair", destroy_session_path(current_professor), method: :delete %></td>
-                          </tr>
-                        </tbody> 
-                      </table>
+                        <a href="/">Home</a>
                     </li>
-                  <% end %>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="sobre">Sobre</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
                 </ul>
-              </div>
-            <% end %>
-        </footer>
-  </body>
-</html>
+                <p class="copyright text-muted small">Copyright &copy; ATLA 2016. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+    <% if Rails.env.development? %>
+      <div class="panel panel-warning"> 
+        <div class="panel-heading"> 
+          <h3 class="panel-title">Debug! Essas informações não aparecem no ambiente de produção!</h3> 
+        </div> 
+        <div class="panel-body">
+        </div> 
+        <ul class='list-group'>
+          <% if current_professor %>
+            <li>
+              <h4>Logado como:</h4>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>id</th>
+                    <th>nome</th>
+                    <th>sobrenome</th>
+                    <th>nome_usuario</th>
+                    <th>email</th>
+                    <th>telefone</th>
+                    <th>tipo</th>
+                    <th>sair</th>
+                  </tr> 
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><%= current_professor.id %></th>
+                    <td><%= current_professor.nome %></td>
+                    <td><%= current_professor.sobrenome %></td>
+                    <td><%= current_professor.nome_usuario %></td>
+                    <td><%= current_professor.email %></td>
+                    <td><%= current_professor.telefone %></td>
+                    <td><%= current_professor.type %></td>
+                    <td><%= link_to "Sair", destroy_session_path(current_professor), method: :delete %></td>
+                  </tr>
+                </tbody> 
+              </table>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+</footer>
