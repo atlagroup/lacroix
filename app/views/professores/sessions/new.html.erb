@@ -5,7 +5,7 @@
 <div class="container">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="omb_login">
-      <h3 class="omb_authTitle">Login or <%= render "professores/shared/link_signup" %></h3>
+      <h3 class="omb_authTitle">Entre ou <%= render "professores/shared/link_signup" %></h3>
       <div class="row omb_row-sm-offset-3 omb_socialButtons">
           <div class="col-xs-6 col-sm-3">
             <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
@@ -24,7 +24,7 @@
     <div class="row omb_row-sm-offset-3 omb_loginOr">
       <div class="col-xs-12 col-sm-6">
         <hr class="omb_hrOr">
-        <span class="omb_spanOr">or</span>
+        <span class="omb_spanOr">ou</span>
       </div>
     </div>
 
@@ -68,5 +68,7 @@
   </div>
   <% end %>
   <hr>
+
+  <%= render "layouts/footer_main" %>
 
 </div>
