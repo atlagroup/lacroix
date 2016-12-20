@@ -13,6 +13,8 @@ end
 gem 'devise'
 # Use Facebook OAuth
 gem 'omniauth-facebook'
+# Use Google OAuth2
+gem 'omniauth-google-oauth2'
 # Use Figaro for ENV vars
 gem 'figaro'
 # Use Puma as the app server

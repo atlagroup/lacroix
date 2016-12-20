@@ -250,12 +250,19 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
   facebook_callback_url = 'http://lacroix-web.herokuapp.com/auth/facebook/callback'
+  google_callback_url = 'http://lacroix-web.herokuapp.com/auth/facebook/callback'
   if Rails.env.development?
     facebook_callback_url = 'http://localhost:3000/auth/facebook/callback'
+    google_callback_url = 'http://localhost:3000/auth/google_oauth2/callback'
   end
   config.omniauth :facebook, ENV["FB_APP_ID"], ENV["FB_APP_SECRET"],
                   callback_url: facebook_callback_url,
                   scope: 'email', info_fields: 'email,first_name,last_name'
+
+  config.omniauth :google_oauth2, ENV["GOOGLE_APP_ID"], ENV["GOOGLE_APP_SECRET"],
+                  redirect_uri: google_callback_url,
+                  scope: 'email, profile, plus.me' 
+
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
