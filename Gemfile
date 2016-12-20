@@ -11,6 +11,12 @@ end
 
 # Use devise for handling authentication and authorization
 gem 'devise'
+# Use Facebook OAuth
+gem 'omniauth-facebook'
+# Use Google OAuth2
+gem 'omniauth-google-oauth2'
+# Use Figaro for ENV vars
+gem 'figaro'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
