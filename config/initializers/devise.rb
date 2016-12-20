@@ -253,7 +253,7 @@ Devise.setup do |config|
   if Rails.env.development?
     facebook_callback_url = 'http://localhost:3000/auth/facebook/callback'
   end
-  config.omniauth :facebook, '308050136245972', '668fbe7d298d57a9c3e67498bdadae8a',
+  config.omniauth :facebook, ENV["FB_APP_ID"], ENV["FB_APP_SECRET"],
                   callback_url: facebook_callback_url,
                   scope: 'email', info_fields: 'email,first_name,last_name'
 
