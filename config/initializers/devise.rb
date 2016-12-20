@@ -250,7 +250,7 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
   facebook_callback_url = 'http://lacroix-web.herokuapp.com/auth/facebook/callback'
-  google_callback_url = 'http://lacroix-web.herokuapp.com/auth/facebook/callback'
+  google_callback_url = 'http://lacroix-web.herokuapp.com/auth/google_oauth2/callback'
   if Rails.env.development?
     facebook_callback_url = 'http://localhost:3000/auth/facebook/callback'
     google_callback_url = 'http://localhost:3000/auth/google_oauth2/callback'
