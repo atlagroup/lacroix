@@ -249,6 +249,14 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
+  facebook_callback_url = 'http://lacroix-web.herokuapp.com/auth/facebook/callback'
+  if Rails.env.development?
+    facebook_callback_url = 'http://localhost:3000/auth/facebook/callback'
+  end
+  config.omniauth :facebook, '308050136245972', '668fbe7d298d57a9c3e67498bdadae8a',
+                  callback_url: facebook_callback_url,
+                  scope: 'email', info_fields: 'email,first_name,last_name'
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

@@ -8,10 +8,7 @@
       <h3 class="omb_authTitle">Login or <%= render "professores/shared/link_signup" %></h3>
       <div class="row omb_row-sm-offset-3 omb_socialButtons">
           <div class="col-xs-6 col-sm-3">
-            <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
-              <i class="fa fa-facebook visible-xs"></i>
-              <span class="hidden-xs">Facebook</span>
-            </a>
+            <%= link_to "Facebook", professor_facebook_omniauth_authorize_path, class: 'btn btn-lg btn-block omb_btn-facebook' %>
           </div>
           <div class="col-xs-6 col-sm-3">
             <a href="#" class="btn btn-lg btn-block omb_btn-google">
