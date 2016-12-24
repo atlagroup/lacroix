@@ -30,6 +30,33 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="container-responsive">
+                    <h4>
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="<%= 'active' if current_page?(estudante_path) %> text-center"><%= link_to "Lacroix para Professores", estudante_path %></li>
+                    </ul>
+                    </h4>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="container-responsive">
+                    <h4>
+                        <ul class="nav navbar-nav navbar-right">
+                        
+                            <li class="<%= 'active' if current_page?(pai_path) %> text-center"><%= link_to "Características", pai_path %></li>
+                            <li class="<%= 'active' if current_page?(professor_path) %> text-center"><%= link_to "Professores conosco", professor_path %></li>
+                            <li class="<%= 'active' if current_page?(escola_path) %> text-center"><%= link_to "Contato", escola_path %></li>
+                        </ul>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+
     <div class="row">
         <div class="col-sm-12 text-center">
             <h2>Bem-Vinda Comunidade</h2>
@@ -38,7 +65,7 @@
     </div>
     <!-- /.row -->
 
-    
+
 
     <hr>
     <div class="container">

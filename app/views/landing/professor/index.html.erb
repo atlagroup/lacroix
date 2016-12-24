@@ -1,16 +1,15 @@
 <body>
     <!-- Image Background Page Header -->
     <!-- Note: The background image is set within the business-casual.css file. -->
-    <!-- Page Content -->
     
-    <div class="intro-header business-background-governo">
+    <!-- Page Content -->
+    <div class="intro-header business-background-professor">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>A cara da Nova Escola Pública</h1>
-                        <h3>Aprimoramento de processos escolares Aprimoramento de processos<br>Aprimoramento de processos escolares Aprimoramento de processos.</h3>
+                        <h1>Melhor ambiente de trabalho,<br>maior qualidade de ensino</h1>
+                        <h3>O primeiro passo para uma ensino público de excelência é <br>fornecer melhores condições tecnológicas para os professores.</h3>
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
@@ -26,8 +25,38 @@
                     </div>
                 </div>
             </div>
-
+            <!-- /.row -->
         </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="container-responsive">
+                    <h4>
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="<%= 'active' if current_page?(estudante_path) %> text-center"><%= link_to "Lacroix para Professores", estudante_path %></li>
+                    </ul>
+                    </h4>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="container-responsive">
+                    <h4>
+                        <ul class="nav navbar-nav navbar-right">
+                        
+                            <li class="<%= 'active' if current_page?(pai_path) %> text-center"><%= link_to "Características", pai_path %></li>
+                            <li class="<%= 'active' if current_page?(professor_path) %> text-center"><%= link_to "Professores conosco", professor_path %></li>
+                            <li class="<%= 'active' if current_page?(escola_path) %> text-center"><%= link_to "Contato", escola_path %></li>
+                        </ul>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
     </div>
 
     <div class="row">
@@ -37,10 +66,15 @@
         </div>
     </div>
     <!-- /.row -->
-
-    
-
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h2>Explore o trabalho de outros professores</h2>
+            <p class="lead">Introduzindo a rede social pensada para escolas, professores e estudantes.</p>
+        </div>
+    </div>
+    <!-- /.row -->
     <hr>
+
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
@@ -65,7 +99,6 @@
             </div>
         </div>
         <!-- /.row -->
-
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
@@ -73,7 +106,9 @@
                 </h1>
             </div>
         </div>
+        <!-- /.row -->
     </div>
+
         <div class="content-section-a">
 
             <div class="container">
@@ -255,8 +290,8 @@
         <!-- /.row -->
 
         <hr>
-
-     <!-- Call to Action Section -->
+        
+         <!-- Call to Action Section -->
         <div class="well">
             <div class="row">
                 <div class="col-md-4">
@@ -270,6 +305,6 @@
         <hr>
     </div>
 
-    <!-- Footer -->
+
     <%= render "layouts/footer_main" %>
 </body>

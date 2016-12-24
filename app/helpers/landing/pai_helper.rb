@@ -1,0 +1,2 @@
+module Landing::PaiHelper
+end
