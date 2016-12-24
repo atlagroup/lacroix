@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GovernoControllerTest < ActionDispatch::IntegrationTest
+class Landing::PricingControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
