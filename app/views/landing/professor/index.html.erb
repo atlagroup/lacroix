@@ -30,22 +30,30 @@
     <!-- /.intro-header -->
 
     <!-- Page Heading/Nav -->
-    <%= render "landing/professor/professor_nav" %>
-
-    <div class="row">
-        <div class="col-sm-12 text-center">
-            <h2>Bem-Vinda Comunidade</h2>
-            <p class="lead">Lacroix fornece um ambiente prático, funcional e social para a comunidade acadêmica.</p>
-        </div>
+    <div class="container">
+        <%= render "landing/professor/professor_nav" %>
     </div>
-    <!-- /.row -->
-    <div class="row">
-        <div class="col-sm-12 text-center">
-            <h2>Explore o trabalho de outros professores</h2>
-            <p class="lead">Introduzindo a rede social pensada para escolas, professores e estudantes.</p>
+    <hr>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center about">
+                <h2>Bem-Vinda Comunidade</h2>
+                <p class="lead">Lacroix fornece um ambiente prático, funcional e social para a comunidade acadêmica.</p>
+            </div>
         </div>
+        <!-- /.row -->
+        <hr>
+        
+        <div class="row">
+            <div class="col-sm-12 text-center about">
+                <h2>Explore o trabalho de outros professores</h2>
+                <p class="lead">Introduzindo a rede social pensada para escolas, professores e estudantes.</p>
+            </div>
+        </div>
+        <!-- /.row -->
     </div>
-    <!-- /.row -->
+    <!-- /.container -->
     <hr>
 
     <div class="container">
@@ -207,8 +215,6 @@
             </div>
         </div>
         <!-- /.row -->
-
-        <hr>
     </div>
 
     <%= render "layouts/footer_main" %>

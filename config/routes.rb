@@ -31,4 +31,10 @@ Rails.application.routes.draw do
   get 'professor/clientes', to: 'landing/professor/clientes#index', as: 'professor_clientes'
   get 'professor/contato', to: 'landing/professor/contato#new', as: 'professor_contato'
 
+  get 'estudante/clientes', to: 'landing/estudante/clientes#index', as: 'estudante_clientes'
+  get 'estudante/contato', to: 'landing/estudante/contato#new', as: 'estudante_contato'
+
+  get 'pai/clientes', to: 'landing/pai/clientes#index', as: 'pai_clientes'
+  get 'pai/contato', to: 'landing/pai/contato#new', as: 'pai_contato'
+
 end

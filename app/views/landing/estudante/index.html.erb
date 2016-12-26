@@ -20,42 +20,20 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <!-- /.container -->
-
     </div>
     <!-- /.intro-header -->
 
+    <!-- Page Heading/Nav -->
     <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="container-responsive">
-                    <h4>
-                        <ul class="nav navbar-nav navbar-left">
-                            <li class="<%= 'active' if current_page?(estudante_path) %> text-center"><%= link_to "Lacroix para Estudantes", estudante_path %></li>
-                        </ul>
-                    </h4>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="container-responsive">
-                    <h4>
-                        <ol class="nav navbar-nav navbar-right">
-                            <li class="<%= 'active' if current_page?(pai_path) %> text-center"><%= link_to "Características", pai_path %></li>
-                            <li class="<%= 'active' if current_page?(professor_path) %> text-center"><%= link_to "Nossos Estudantes", professor_path %></li>
-                            <li class="<%= 'active' if current_page?(escola_path) %> text-center"><%= link_to "Contato", escola_path %></li>
-                        </ol>
-                    </h4>
-                </div>
-            </div>
-        </div>
-        <!-- /.row -->
+        <%= render "landing/estudante/estudante_nav" %>
     </div>
     <!-- /.container -->
+    <hr>
 
     <div class="row">
-        <div class="col-sm-12 text-center">
+        <div class="col-sm-12 text-center about">
             <h2>Bem-Vinda Comunidade</h2>
             <p class="lead">Lacroix fornece um ambiente prático, funcional e social para a comunidade acadêmica.</p>
         </div>
@@ -352,8 +330,6 @@
             </div>
         </div>
         <!-- /.row -->
-
-        <hr>
     </div>
 
     <!-- Footer -->
