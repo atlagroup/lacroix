@@ -1,2 +1,0 @@
-class GovernoController < ApplicationController
-end

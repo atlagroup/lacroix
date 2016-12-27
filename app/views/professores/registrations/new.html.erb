@@ -1,49 +1,111 @@
-<h2>Cadastro</h2>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+  <body>
+    <div class="container">
 
-  <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome, autofocus: true %>
-  </div>
+      <div class="omb_login">
+        <h3 class="omb_authTitle">Entre com</h3>
+        <div class="row omb_row-sm-offset-3 omb_socialButtons">
+            <div class="col-xs-6 col-sm-3">
+              <%= link_to "Facebook", professor_facebook_omniauth_authorize_path, class: 'btn btn-lg btn-block omb_btn-facebook' %>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <%= link_to "Google", professor_google_oauth2_omniauth_authorize_path, class: 'btn btn-lg btn-block omb_btn-google' %>
+            </div>  
+        </div>
 
-  <div class="field">
-    <%= f.label :sobrenome %><br />
-    <%= f.text_field :sobrenome %>
-  </div>
+        <div class="row omb_row-sm-offset-3 omb_loginOr">
+          <div class="col-xs-12 col-sm-6">
+            <hr class="omb_hrOr">
+            <span class="omb_spanOr">ou</span>
+          </div>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= f.label :nome_usuario, "Nome de Usuario" %><br />
-    <%= f.text_field :nome_usuario %>
-  </div>
+      <div class="main-login main-center">
 
-  <div class="field">
-    <%= f.label :telefone %><br />
-    <%= f.text_field :telefone %>
-  </div>
+        <div class="form-group">
+          <%= f.label :nome %><br />
+          <div class="cols-sm-10">
+            <div class="field input-group">
+              <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+              <%= f.text_field :nome, autofocus: true, class: "form-control", placeholder: "Seu nome" %>
+            </div>
+          </div>
+        </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
-  </div>
+        <div class="form-group">
+          <%= f.label :sobrenome %><br />
+          <div class="cols-sm-10">
+            <div class="field input-group">
+              <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+              <%= f.text_field :sobrenome, class: "form-control", placeholder: "Seu sobrenome" %>
+            </div>
+          </div>
+        </div>
 
-  <div class="field">
-    <%= f.label :password, "Senha" %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> caractéres no minímo)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+        <div class="form-group">
+          <%= f.label :nome_usuario, "Nome de Usuario" %><br />
+          <div class="cols-sm-10">
+            <div class="field input-group">
+              <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+              <%= f.text_field :nome_usuario, class: "form-control", placeholder: "Informe um nome para acesso (sem espaços)" %>
+            </div>
+          </div>
+        </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirmação da Senha" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+        <div class="form-group">
+          <%= f.label :telefone %><br />
+          <div class="cols-sm-10">
+            <div class="field input-group">
+              <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+              <%= f.text_field :telefone, class: "form-control", placeholder: "Informe seu telefone" %>
+            </div>
+          </div>
+        </div>
 
-  <div class="actions">
-    <%= f.submit "Entrar" %>
-  </div>
+        <div class="form-group">
+          <%= f.label :email %><br />
+          <div class="cols-sm-10">
+            <div class="field input-group">
+              <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+              <%= f.text_field :email, class: "form-control", placeholder: "Informe seu email" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password, "Senha", class: "cols-sm-2 control-label"  %>
+          <div class="cols-sm-10">
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> caractéres no minímo)</em>
+            <% end %><br />
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+              <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Insira uma senha" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password_confirmation, "Confirmação da Senha", class: "cols-sm-2 control-label" %><br />
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+              <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirme sua senha", class: "form-control"%>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group ">
+          <div class="actions">
+            <%= f.submit "Entrar", class: "btn btn-primary btn-lg btn-block login-button" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= render "layouts/footer_main" %>
+  </body>
+
 <% end %>
 
-<%= render "professores/shared/links" %>

@@ -13,13 +13,10 @@
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg">Cadastre Gratuitamente</span></a>
                             </li>
                             <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg">Cadastre o Plano Individual</span></a>
                             </li>
                         </ul>
                     </div>
@@ -32,47 +29,31 @@
     </div>
     <!-- /.intro-header -->
 
+    <!-- Page Heading/Nav -->
+    <div class="container">
+        <%= render "landing/professor/professor_nav" %>
+    </div>
+    <hr>
+    
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
-                <div class="container-responsive">
-                    <h4>
-                    <ul class="nav navbar-nav navbar-left">
-                        <li class="<%= 'active' if current_page?(estudante_path) %> text-center"><%= link_to "Lacroix para Professores", estudante_path %></li>
-                    </ul>
-                    </h4>
-                </div>
+            <div class="col-sm-12 text-center about">
+                <h2>Bem-Vinda Comunidade</h2>
+                <p class="lead">Lacroix fornece um ambiente prático, funcional e social para a comunidade acadêmica.</p>
             </div>
-            <div class="col-sm-6">
-                <div class="container-responsive">
-                    <h4>
-                        <ul class="nav navbar-nav navbar-right">
-                        
-                            <li class="<%= 'active' if current_page?(pai_path) %> text-center"><%= link_to "Características", pai_path %></li>
-                            <li class="<%= 'active' if current_page?(professor_path) %> text-center"><%= link_to "Professores conosco", professor_path %></li>
-                            <li class="<%= 'active' if current_page?(escola_path) %> text-center"><%= link_to "Contato", escola_path %></li>
-                        </ul>
-                    </h4>
-                </div>
+        </div>
+        <!-- /.row -->
+        <hr>
+        
+        <div class="row">
+            <div class="col-sm-12 text-center about">
+                <h2>Explore o trabalho de outros professores</h2>
+                <p class="lead">Introduzindo a rede social pensada para escolas, professores e estudantes.</p>
             </div>
         </div>
         <!-- /.row -->
     </div>
-
-    <div class="row">
-        <div class="col-sm-12 text-center">
-            <h2>Bem-Vinda Comunidade</h2>
-            <p class="lead">Lacroix fornece um ambiente prático, funcional e social para a comunidade acadêmica.</p>
-        </div>
-    </div>
-    <!-- /.row -->
-    <div class="row">
-        <div class="col-sm-12 text-center">
-            <h2>Explore o trabalho de outros professores</h2>
-            <p class="lead">Introduzindo a rede social pensada para escolas, professores e estudantes.</p>
-        </div>
-    </div>
-    <!-- /.row -->
+    <!-- /.container -->
     <hr>
 
     <div class="container">
@@ -227,84 +208,14 @@
         </h1>
         <div class="row">
             <div class="col-md-4">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Basic</h3>
-                    </div>
-                    <div class="panel-body">
-                        <span class="price"><sup>$</sup>19<sup>99</sup></span>
-                        <span class="period">per month</span>
-                    </div>
-                    <ul class="list-group">
-                        <li class="list-group-item"><strong>1</strong> User</li>
-                        <li class="list-group-item"><strong>5</strong> Projects</li>
-                        <li class="list-group-item"><strong>Unlimited</strong> Email Accounts</li>
-                        <li class="list-group-item"><strong>10GB</strong> Disk Space</li>
-                        <li class="list-group-item"><strong>100GB</strong> Monthly Bandwidth</li>
-                        <li class="list-group-item"><a href="#" class="btn btn-primary">Sign Up!</a>
-                        </li>
-                    </ul>
-                </div>
+                <%= render "landing/pricing/tabela_professor_free" %>
             </div>
             <div class="col-md-4">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Plus</h3>
-                    </div>
-                    <div class="panel-body">
-                        <span class="price"><sup>$</sup>39<sup>99</sup></span>
-                        <span class="period">per month</span>
-                    </div>
-                    <ul class="list-group">
-                        <li class="list-group-item"><strong>10</strong> User</li>
-                        <li class="list-group-item"><strong>500</strong> Projects</li>
-                        <li class="list-group-item"><strong>Unlimited</strong> Email Accounts</li>
-                        <li class="list-group-item"><strong>1000GB</strong> Disk Space</li>
-                        <li class="list-group-item"><strong>10000GB</strong> Monthly Bandwidth</li>
-                        <li class="list-group-item"><a href="#" class="btn btn-primary">Sign Up!</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Ultra</h3>
-                    </div>
-                    <div class="panel-body">
-                        <span class="price"><sup>$</sup>159<sup>99</sup></span>
-                        <span class="period">per month</span>
-                    </div>
-                    <ul class="list-group">
-                        <li class="list-group-item"><strong>Unlimted</strong> Users</li>
-                        <li class="list-group-item"><strong>Unlimited</strong> Projects</li>
-                        <li class="list-group-item"><strong>Unlimited</strong> Email Accounts</li>
-                        <li class="list-group-item"><strong>10000GB</strong> Disk Space</li>
-                        <li class="list-group-item"><strong>Unlimited</strong> Monthly Bandwidth</li>
-                        <li class="list-group-item"><a href="#" class="btn btn-primary">Sign Up!</a>
-                        </li>
-                    </ul>
-                </div>
+                <%= render "landing/pricing/tabela_professor_individual" %>
             </div>
         </div>
         <!-- /.row -->
-
-        <hr>
-        
-         <!-- Call to Action Section -->
-        <div class="well">
-            <div class="row">
-                <div class="col-md-4">
-                    <a class="btn btn-lg btn-success btn-block" href="#">Cadastre-se no Lacroix</a>
-                </div>
-                <div class="col-md-8">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-                </div>
-            </div>
-        </div>
-        <hr>
     </div>
-
 
     <%= render "layouts/footer_main" %>
 </body>
