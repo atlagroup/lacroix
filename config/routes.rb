@@ -18,6 +18,11 @@ Rails.application.routes.draw do
     end
   end
 
+  authenticate(:professor) do
+    get 'profile', to: 'professores/profile#index'
+    get 'profile/edit', to: 'professores/profile#edit', as: 'edit_professor'
+  end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get 'estudante', to: 'landing/estudante#index', as: 'estudante'
@@ -46,9 +51,6 @@ Rails.application.routes.draw do
   get 'pai/clientes', to: 'landing/pai/clientes#index', as: 'pai_clientes'
   get 'pai/contato', to: 'landing/pai/contato#new', as: 'pai_contato'
 
-  authenticate(:professor) do
-    get 'profile', to: 'professores/profile#index'
-    get 'profile/edit', to: 'professores/profile#edit', as: 'edit_professor'
-  end
+
 
 end
