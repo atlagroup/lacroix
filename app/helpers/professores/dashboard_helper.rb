@@ -1,0 +1,2 @@
+module Professores::DashboardHelper
+end

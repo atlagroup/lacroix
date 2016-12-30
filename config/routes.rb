@@ -8,8 +8,17 @@ Rails.application.routes.draw do
       omniauth_callbacks: 'professores/omniauth_callbacks'
     }
 
+  devise_scope :professor do
+    authenticated  do
+      root to: 'professores/dashboard#index', as: 'authenticated_patient_root'
+    end
+
+    unauthenticated do
+      root to: 'landing/main#index', as: 'unauthenticated_professor_root'
+    end
+  end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root "landing/main#index"
 
   get 'estudante', to: 'landing/estudante#index', as: 'estudante'
   get 'pai', to: 'landing/pai#index', as: 'pai'
@@ -36,5 +45,10 @@ Rails.application.routes.draw do
 
   get 'pai/clientes', to: 'landing/pai/clientes#index', as: 'pai_clientes'
   get 'pai/contato', to: 'landing/pai/contato#new', as: 'pai_contato'
+
+  authenticate(:professor) do
+    get 'profile', to: 'professores/profile#index'
+    get 'profile/edit', to: 'professores/profile#edit', as: 'edit_professor'
+  end
 
 end

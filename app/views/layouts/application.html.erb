@@ -12,44 +12,11 @@
   <body>
 
   	<!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">Lacroix</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="<%= 'active' if current_page?(estudante_path) %>"><%= link_to "Estudante", estudante_path %></li>
-                    <li class="<%= 'active' if current_page?(pai_path) %>"><%= link_to "Pai", pai_path %></li>
-                    <li class="<%= 'active' if current_page?(professor_path) %>"><%= link_to "Professor", professor_path %></li>
-                    <li class="<%= 'active' if current_page?(escola_path) %>"><%= link_to "Escola", escola_path %></li>
-                    <li class="<%= 'active' if current_page?(governo_path) %>"><%= link_to "Governo", governo_path %></li>
-                </ul>
-                <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <% if current_professor %>
-                      <%= link_to "Sair", destroy_session_path(current_professor), method: :delete, class: "btn btn-default" %>
-                    <% else %>
-                      <%= link_to "Entre", new_professor_session_path, class: "btn btn-default" %>
-                    <% end %>
-                    <%= link_to "Cadastre-se", new_professor_registration_path, class: "btn btn-success" %>
-                </form>
-            </div>
-            <!-- /.navbar-collapse -->
-            
-        <!-- /.container -->
-    </nav>
+    <% if !current_professor %>
+        <%= render "layouts/nav_public" %>
+    <% else %>
+        <%= render "layouts/nav_user" %>
+    <% end %>
 
     <% if notice %>
       <div class="notice"><%= notice %></div>
