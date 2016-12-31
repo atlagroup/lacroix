@@ -1,0 +1,2 @@
+module Professores::ConfiguracoesHelper
+end

@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   authenticate(:professor) do
     get 'profile', to: 'professores/profile#index'
-    get 'profile/edit', to: 'professores/profile#edit', as: 'edit_professor'
+    get 'configuracoes/perfil', to: 'professores/configuracoes/perfil#edit', as: 'edit_professor'
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
