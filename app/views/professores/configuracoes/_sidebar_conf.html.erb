@@ -1,0 +1,15 @@
+<!-- Sidebar Column -->
+<div class="col-md-3 col-sm-6 col-xs-12 page-top">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                Configurações Pessoais</h3>
+        </div>
+        <ul class="list-group">
+            <a href="perfil" class="list-group-item <%= 'active' if current_page?(edit_perfil_path) %>">Perfil</a>
+            <a href="#" class="list-group-item ">Senha</a>
+            <a href="contextos" class="list-group-item <%= 'active' if current_page?(edit_contextos_path) %>">Contextos</a>
+            <a href="privacidade" class="list-group-item ">Privacidade</a>
+        </ul>
+    </div>
+</div>

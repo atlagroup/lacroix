@@ -23,6 +23,10 @@
                     <li>
                         <a href="pricing">Planos</a>
                     </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#">Privacidade</a>
+                    </li>
                 </ul>
                 <p class="copyright text-muted small">Copyright &copy; ATLA 2017. Todos os direitos reservados.</p>
             </div>
@@ -44,46 +48,4 @@
             </div>
         </div>
     </div>
-    <% if Rails.env.development? %>
-      <div class="panel panel-warning"> 
-        <div class="panel-heading"> 
-          <h3 class="panel-title">Debug! Essas informações não aparecem no ambiente de produção!</h3> 
-        </div> 
-        <div class="panel-body">
-        </div> 
-        <ul class='list-group'>
-          <% if current_professor %>
-            <li>
-              <h4>Logado como:</h4>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>id</th>
-                    <th>nome</th>
-                    <th>sobrenome</th>
-                    <th>nome_usuario</th>
-                    <th>email</th>
-                    <th>telefone</th>
-                    <th>tipo</th>
-                    <th>sair</th>
-                  </tr> 
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row"><%= current_professor.id %></th>
-                    <td><%= current_professor.nome %></td>
-                    <td><%= current_professor.sobrenome %></td>
-                    <td><%= current_professor.nome_usuario %></td>
-                    <td><%= current_professor.email %></td>
-                    <td><%= current_professor.telefone %></td>
-                    <td><%= current_professor.type %></td>
-                    <td><%= link_to "Sair", destroy_session_path(current_professor), method: :delete %></td>
-                  </tr>
-                </tbody> 
-              </table>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
 </footer>

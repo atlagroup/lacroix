@@ -20,7 +20,9 @@ Rails.application.routes.draw do
 
   authenticate(:professor) do
     get 'profile', to: 'professores/profile#index'
-    get 'configuracoes/perfil', to: 'professores/configuracoes/perfil#edit', as: 'edit_professor'
+    get 'configuracoes/perfil', to: 'professores/configuracoes/perfil#edit', as: 'edit_perfil'
+    get 'configuracoes/contextos', to: 'professores/configuracoes/contextos#edit', as: 'edit_contextos'
+    get 'configuracoes/privacidade', to: 'professores/configuracoes/privacidade#edit', as: 'edit_privacidade'
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -50,6 +52,8 @@ Rails.application.routes.draw do
 
   get 'pai/clientes', to: 'landing/pai/clientes#index', as: 'pai_clientes'
   get 'pai/contato', to: 'landing/pai/contato#new', as: 'pai_contato'
+
+  get 'ajuda', to: 'landing/ajuda#index', as: 'faq'
 
 
 
