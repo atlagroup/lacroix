@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161220102908) do
+ActiveRecord::Schema.define(version: 20170111212059) do
+
+  create_table "escolas", force: :cascade do |t|
+    t.integer  "id_escola_api"
+    t.string   "nome"
+    t.string   "cidade"
+    t.integer  "id_cidade_api"
+    t.string   "sigla_estado"
+    t.integer  "id_estado_api"
+    t.string   "dependencia_administrativa"
+    t.string   "estado_de_regulamentacao"
+    t.string   "situacao_de_funcionamento"
+    t.string   "tipo_de_localizacao"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "usuarios", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

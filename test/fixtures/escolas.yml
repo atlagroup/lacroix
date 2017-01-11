@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_escola_api: 1
+  nome: MyString
+  cidade: MyString
+  id_cidade_api: 1
+  sigla_estado: MyString
+  id_estado_api: 1
+  dependencia_administrativa: MyString
+  estado_de_regulamentacao: MyString
+  situacao_de_funcionamento: MyString
+  tipo_de_localizacao: MyString
+
+two:
+  id_escola_api: 1
+  nome: MyString
+  cidade: MyString
+  id_cidade_api: 1
+  sigla_estado: MyString
+  id_estado_api: 1
+  dependencia_administrativa: MyString
+  estado_de_regulamentacao: MyString
+  situacao_de_funcionamento: MyString
+  tipo_de_localizacao: MyString
